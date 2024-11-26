@@ -1,0 +1,80 @@
+.container {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .skillList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skillCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+  }
+  
+  .skillIcon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .skillCard:hover .skillIcon {
+    transform: scale(1.2);
+  }
+  
+  .skillName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  @media (max-width: 768px) {
+    .skillList {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+  
+    .skillCard {
+      padding: 0.8rem;
+    }
+  
+    .skillIcon {
+      font-size: 2rem;
+    }
+  
+    .skillName {
+      font-size: 1rem;
+    }
+  }
+  .customIcon {
+    width: 3rem; /* Match the width of other icons */
+    height: 3rem; /* Match the height of other icons */
+    object-fit: contain; /* Ensure the image fits within the container without distortion */
+  }
